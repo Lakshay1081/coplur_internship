@@ -78,9 +78,9 @@ CREATE TABLE Courses (
 """)
 
 #inserting data in student table
-conn.execute("INSERT INTO Students (name, age, city) VALUES ('Alice', 20, 'Jaipur')")
-conn.execute("INSERT INTO Students (name, age, city) VALUES ('Bob', 22, 'Delhi')")
-conn.execute("INSERT INTO Students (name, age, city) VALUES ('Charlie', 21, 'Mumbai')")
+conn.execute("INSERT INTO Students (name, age, city) VALUES ('lakshay', 20, 'Jaipur')")
+conn.execute("INSERT INTO Students (name, age, city) VALUES ('shivam', 22, 'Delhi')")
+conn.execute("INSERT INTO Students (name, age, city) VALUES ('suchitra', 21, 'Mumbai')")
 
 #inserting data in courses table
 conn.execute("INSERT INTO Courses (course_name, duration) VALUES ('Python Programming', '3 months')")
@@ -103,7 +103,7 @@ for row in data:
     print(row)
 
 #Updating Record
-conn.execute("UPDATE Students SET city = 'Bangalore' WHERE name = 'Charlie'")
+conn.execute("UPDATE Students SET city = 'Bangalore' WHERE name = 'suchitra'")
 
 #updated data
 print("\nAfter Update:")
@@ -112,7 +112,7 @@ for row in data:
     print(row)
 
 # Deleting a Record
-conn.execute("DELETE FROM Students WHERE name = 'Bob'")
+conn.execute("DELETE FROM Students WHERE name = 'lakshay'")
 
 print("\nAfter Deletion:")
 data=conn.execute("SELECT * FROM Students")
